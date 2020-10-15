@@ -7,9 +7,9 @@
  */
  
 #include <Wire.h> 
-#include <I2C_LCD.h>
+#include <I2C_LiquidCrystal.h>
 
-I2C_LCD lcd(0x3F,20,4);  // set the LCD address to 0x27 for a 16 chars and 2 line display
+I2C_LiquidCrystal lcd(0x3F,20,4);  // set the LCD address to 0x27 for a 16 chars and 2 line display
 
 void setup() {
   lcd.init();                      // initialize the lcd 
