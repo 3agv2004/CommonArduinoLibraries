@@ -4,7 +4,7 @@
  */
  
 #include <Wire.h>
-#include <I2C_LCD.h>
+#include <I2C_LiquidCrystal.h>
 
 #if defined(ARDUINO) && ARDUINO >= 100
 #define printByte(args)  write(args);
@@ -21,7 +21,7 @@ uint8_t check[8] = {0x0,0x1,0x3,0x16,0x1c,0x8,0x0};
 uint8_t cross[8] = {0x0,0x1b,0xe,0x4,0xe,0x1b,0x0};
 uint8_t retarrow[8] = {	0x1,0x1,0x5,0x9,0x1f,0x8,0x4};
   
-I2C_LCD lcd(0x3F,20,4);  // set the LCD address to 0x3F for a 16 chars and 2 line display
+I2C_LiquidCrystal lcd(0x3F,20,4);  // set the LCD address to 0x3F for a 16 chars and 2 line display
 
 void setup() {
   lcd.init();                      // initialize the lcd 
