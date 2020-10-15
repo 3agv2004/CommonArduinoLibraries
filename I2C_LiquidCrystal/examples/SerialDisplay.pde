@@ -5,20 +5,19 @@
  *Compatible with the Arduino IDE 1.0
  *Library version:1.1
  */
+ 
 #include <Wire.h> 
 #include <I2C_LCD.h>
 
-I2C_LCD lcd(0x27,20,4);  // set the LCD address to 0x27 for a 16 chars and 2 line display
+I2C_LCD lcd(0x3F,20,4);  // set the LCD address to 0x27 for a 16 chars and 2 line display
 
-void setup()
-{
+void setup() {
   lcd.init();                      // initialize the lcd 
   lcd.backlight();
   Serial.begin(9600);
 }
 
-void loop()
-{
+void loop() {
   // when characters arrive over the serial port...
   if (Serial.available()) {
     // wait a bit for the entire message to arrive
